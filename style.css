@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  border-bottom-left-radius: 3rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.toggle {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+#dropdown {
+  display: none;
+}
+
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header .logo {
+  width: 50%;
+  padding-left: 10vw;
+  height: 100%;
+  padding-top: 5rem;
+}
+header .logo img {
+  width: 2.5rem;
+}
+header .navbar {
+  width: 50%;
+  background-color: hsl(207, 33%, 95%);
+  padding-right: 7vw;
+  border-bottom-left-radius: 5rem;
+  height: 100%;
+  padding-top: 3rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+}
+header ul {
+  list-style-type: none;
+  text-align: right;
+  height: 100%;
+}
+header ul li {
+  display: inline-block;
+  width: 6rem;
+  text-align: center;
+}
+header ul li:nth-child(4) {
+  width: 3rem;
+  font-size: 3rem;
+  color: hsl(231, 7%, 65%);
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+header ul li:nth-child(5) a:only-child {
+  color: hsl(231, 7%, 65%);
+}
+header ul li:nth-child(5) a:only-child:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 35rem;
+  margin-top: -15rem;
+}
+
+.card1 {
+  padding-left: 10vw;
+  padding-top: 7rem;
+  padding-right: 2.5rem;
+  height: 100%;
+}
+.card1 span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  background-color: black;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+.card1 > p:first-child {
+  font-size: 1rem;
+  color: hsl(230, 11%, 40%);
+  letter-spacing: 0.1rem;
+}
+.card1 > p:nth-child(2) {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: hsl(230, 29%, 20%);
+  margin: 2rem 0;
+}
+.card1 > p:nth-child(3) {
+  color: hsl(230, 11%, 40%);
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+.card1 > .bottom p {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: hsl(231, 7%, 65%);
+  margin-top: 4rem;
+}
+.card1 > .bottom p a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  background-color: hsl(0, 100%, 68%);
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.card1 > .bottom p a:hover {
+  opacity: 0.8;
+}
+
+.card2 {
+  height: 100%;
+  padding-top: 7rem;
+  overflow-x: hidden;
+}
+.card2 img {
+  width: 120%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1280px) {
+  header {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    width: 50%;
+    padding-left: 5vw;
+    height: 100%;
+    padding-top: 5rem;
+  }
+  header .logo img {
+    width: 2.5rem;
+  }
+  header .navbar {
+    width: 50%;
+    padding-right: 3vw;
+    border-bottom-left-radius: 5rem;
+    height: 100%;
+    padding-top: 3rem;
+  }
+  .card1 {
+    padding-left: 5vw;
+    padding-top: 7rem;
+    padding-right: 3rem;
+    height: 100%;
+  }
+  .card1 > .bottom p {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: hsl(231, 7%, 65%);
+    margin-top: 4rem;
+  }
+  .card1 > .bottom p a {
+    display: block;
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 1023px) {
+  body {
+    position: relative;
+  }
+  .toggle {
+    display: block;
+    padding-right: 5vw;
+    padding-top: 5rem;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: hsl(240, 38%, 87%);
+    border-bottom-left-radius: 5rem;
+  }
+  .toggle img {
+    width: 2.5rem;
+  }
+  #hamburger {
+    display: block;
+  }
+  #close {
+    display: none;
+  }
+  #dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 10rem;
+    left: 10vw;
+    width: 80vw;
+    height: 16rem;
+    padding: 1rem;
+    z-index: 2;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  #dropdown > ul {
+    list-style-type: none;
+  }
+  #dropdown > ul li {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  #dropdown > ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  #dropdown > ul li:nth-child(4) {
+    border: none;
+    border-top: 1px solid hsl(231, 7%, 65%);
+    width: 80%;
+    font-size: 1em;
+  }
+  #dropdown > ul li:nth-child(4) a {
+    color: hsl(231, 7%, 65%);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .logo {
+    width: 50%;
+  }
+  header .navbar {
+    display: none;
+  }
+  header .navbar ul {
+    display: none;
+  }
+  main {
+    margin-top: -25vh;
+  }
+}
+@media (max-width: 767px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 7rem;
+    min-height: 90vh;
+  }
+  .card1 {
+    order: 2;
+    padding: 0 5vw;
+  }
+  .card1 > .bottom p a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+    background-color: hsl(0, 100%, 68%);
+    color: white;
+  }
+  .card1 > .bottom p a:hover {
+    opacity: 0.8;
+  }
+  .card2 {
+    padding-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    order: 1;
+  }
+  .card2 img {
+    width: 150%;
+    padding-left: 0rem;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    margin-top: -20vh;
+  }
+  .card1 > .bottom p {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: hsl(231, 7%, 65%);
+    margin-top: 4rem;
+  }
+  .card1 > .bottom p a {
+    display: block;
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main {
+    margin-top: -25vh;
+  }
+}
+@media (min-width: 767px) and (orientation: landscape) {
+  header {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main {
+    margin-top: -45vh;
+  }
+}
